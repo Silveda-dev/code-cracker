@@ -7,7 +7,7 @@ int main() {
     float entropy;
 
     cout << "Welcome to Code Cracker - helping you decrypt a range of ciphers." << endl;
-    cout << "Please the string to decrypt:  ";
+    cout << "Please enter the string to decrypt:  ";
     cin >> encrypted;
     cout << "Would you like to begin by calculating entropy and receiving suggestions on likely ciphers? (Y/N)  ";
     cin >> do_entropy;
