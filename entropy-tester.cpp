@@ -19,9 +19,15 @@ void test_letter_frequency(Entropy e) {
     return;
 }
 
+void test_entropy(Entropy e) {
+    std::cout << "Entropy: " << e.get_entropy() << std::endl;
+    return;
+}
+
 int main() {
-    Entropy e("cat");
+    Entropy e("asdfjlkafsdjklsdfaasfdsdfjklljkljksdfjkl");
     test_letter_count(e);
     test_letter_frequency(e);
+    test_entropy(e);
     return 0;
 }
