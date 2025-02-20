@@ -14,7 +14,6 @@ class Entropy {
         void count_letters(std::string encrypted) {
             char c = 'a';
             for (int i = 0; i < 26; i++) {
-                std::cout << c << std::endl;
                 std::size_t pos_found = -1;
                 do {
                     pos_found = encrypted.find(c,pos_found+1);
@@ -25,11 +24,20 @@ class Entropy {
                 c++;
             }
         };
-        void calc_frequencies();
+        void calc_frequencies() {
+            int sum = 0;
+            for (int i = 0; i < 26; i++) {
+                sum += enc_letter_count[i];
+            }
+            for (int j = 0; j < 26; j++) {
+                enc_letter_frequency[j] = (static_cast<float>(enc_letter_count[j])/static_cast<float>(sum));
+            }
+        }
         void calc_entropy();
     public:
         Entropy(std::string encrypted) {
             count_letters(encrypted);
+            calc_frequencies();
         };
         int get_entropy();
         ~Entropy(){};
@@ -38,6 +46,9 @@ class Entropy {
         Entropy(){};
         int* get_enc_letter_count() {
             return &enc_letter_count[0];
+        }
+        float* get_enc_letter_frequency() {
+            return &enc_letter_frequency[0];
         }
 };
 
