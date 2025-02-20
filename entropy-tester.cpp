@@ -11,7 +11,7 @@ void test_letter_count(Entropy e) {
 }
 
 int main() {
-    Entropy e;
+    Entropy e("cat");
     test_letter_count(e);
     return 0;
 }
