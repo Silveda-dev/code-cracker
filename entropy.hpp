@@ -15,7 +15,6 @@ class Entropy {
             for (size_t x = 0; x < encrypted.size(); x++) {
                 encrypted[x] = tolower(encrypted[x]);
             }
-            std::cout << encrypted << std::endl;
             char c = 'a';
             for (int i = 0; i < 26; i++) {
                 std::size_t pos_found = -1;
