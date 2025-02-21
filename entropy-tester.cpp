@@ -25,7 +25,7 @@ void test_entropy(Entropy e) {
 }
 
 int main() {
-    Entropy e("asdfjlkafsdjklsdfaasfdsdfjklljkljksdfjkl");
+    Entropy e("CATsdfjlkaFfsAdjklsdfaasfdsdfjklljkljksdfjkl");
     test_letter_count(e);
     test_letter_frequency(e);
     test_entropy(e);
