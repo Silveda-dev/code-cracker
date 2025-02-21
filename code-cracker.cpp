@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "entropy.hpp"
 using namespace std;
 
 int main() {
@@ -18,6 +19,8 @@ int main() {
 
     if (do_entropy == "Y") {
         //Call entropy calculation function
+        Entropy e(encrypted);
+        cout << "Entropy: " << e.get_entropy() << endl;
     }
 
     //Move to decrypting stage 
