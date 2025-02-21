@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <bits/stdc++.h>
+#include <cstring>
 
 class Entropy {
     private:
@@ -11,6 +12,10 @@ class Entropy {
         float enc_letter_frequency[26] = {0};
         float entropy_val;
         void count_letters(std::string encrypted) {
+            for (size_t x = 0; x < encrypted.size(); x++) {
+                encrypted[x] = tolower(encrypted[x]);
+            }
+            std::cout << encrypted << std::endl;
             char c = 'a';
             for (int i = 0; i < 26; i++) {
                 std::size_t pos_found = -1;
