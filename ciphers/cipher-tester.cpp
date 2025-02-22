@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    Rot13 r("abcdefghijklmnopqrstuvwxyz");
+    Rot13 r("aBcdeFghijklmNopqrstuvwxyz");
     cout << r.get_decrypted() << endl;
 
     return 0;
